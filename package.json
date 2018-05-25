@@ -3,9 +3,7 @@
   "version": "0.0.0-development",
   "description": "Elegant reducer",
   "main": "lib/index.js",
-  "files": [
-    "lib/"
-  ],
+  "files": ["lib/"],
   "scripts": {
     "commit": "git-cz",
     "lint": "eslint src __tests__",
