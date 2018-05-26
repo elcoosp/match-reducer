@@ -52,7 +52,8 @@ const reducer = matchReducer(
   }
 )
 
-reducer(null, { type: 'INC', payload: 1 }) // { counter: 1, something: 'else' }
+reducer(null, { type: 'INC', payload: 1 })
+// { counter: 1, something: 'else' }
 ```
 
 ### makeActionsAndReducer
@@ -70,7 +71,8 @@ const { reducer, actionCreators } = makeActionsAndReducer(
   }
 )
 
-reducer({ counter: 0 }, actionCreators.incSomething(1) }) // { counter: 1 }
+reducer({ counter: 0 }, actionCreators.incSomething(1) })
+// { counter: 1 }
 ```
 
 ## Support

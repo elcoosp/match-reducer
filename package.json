@@ -25,7 +25,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "keywords": [],
+  "keywords": ["redux", "matching", "action creators", "reducer"],
   "author": "elcoosp <elcoosp@gmail.com>",
   "license": "MIT",
   "bugs": {
