@@ -17,6 +17,8 @@ Elegant reducer
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
+    - [matchReducer](#matchreducer)
+    - [makeActionsAndReducer](#makeactionsandreducer)
   - [Support](#support)
   - [Contributing](#contributing)
 
@@ -26,7 +28,10 @@ Elegant reducer
 
 ## Usage
 
+### matchReducer
+
 The matchReducer accept as first argument an object mapping action types with their respective reducers function.
+Second argument (optionnal) accept the initialState and a boolean value for the passOnlyPayload property (default to false, pass the whole action to the reducer).
 
 ```javascript
 import { matchReducer } from 'match-reducer'
@@ -50,7 +55,23 @@ const reducer = matchReducer(
 reducer(null, { type: 'INC', payload: 1 }) // { counter: 1, something: 'else' }
 ```
 
-The optionnal second argument accept the initialState and a boolean value for the passOnlyPayload property (default to false).
+### makeActionsAndReducer
+
+Take the same aguments as matchReducer and return an object with a reducer and camelCased action creators with a type and payload property.
+
+```javascript
+import { makeActionsAndReducer } from 'match-reducer'
+
+const { reducer, actionCreators } = makeActionsAndReducer(
+  {
+    INC_SOMETHING: (state, action) => ({
+      counter: state.counter + action.payload
+    })
+  }
+)
+
+reducer({ counter: 0 }, actionCreators.incSomething(1) }) // { counter: 1 }
+```
 
 ## Support
 
