@@ -3,7 +3,9 @@
   "version": "0.0.0-development",
   "description": "Elegant reducer",
   "main": "lib/index.js",
-  "files": ["lib/"],
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "commit": "git-cz",
     "lint": "eslint src __tests__",
@@ -45,5 +47,8 @@
     "jest": "^23.0.0",
     "semantic-release": "^15.5.0",
     "travis-deploy-once": "^5.0.0"
+  },
+  "dependencies": {
+    "change-case": "^3.0.2"
   }
 }
