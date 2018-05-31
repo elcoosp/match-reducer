@@ -9,7 +9,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Known Vulnerabilities](https://snyk.io/test/github/elcoosp/match-reducer/badge.svg)](https://snyk.io/test/github/elcoosp/match-reducer)
 
-Elegant reducer
+Elegant redux reducer
 
 ## Table of Contents
 
